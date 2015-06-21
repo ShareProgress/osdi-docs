@@ -1,36 +1,92 @@
-PAGES AND BUTTONS
-Fields
-Methods
-CREATE & UPDATE
-Sample Request:
-Simple Create New Page- autofilling variants from the page data
-Create New Page - autofilling variants from the page data for unset variant
-options
-Edit Existing Page - Adding New Facebook Variant
-Create New Page - With A/B Tests & Advanced Options
-Create New Button - With A/B Tests & Advanced Options
-Edit Page - Deleting A/B Variants from Email
-Sample Response
-Saving a Page
-Saving a Button - using the Large Facebook (sp_fb_large) template
-READ
-sample request
-sample response
-ANALYZE
-sample request
-sample response
-Page with A/B tests
-Button with A/B tests
-DESTROY
-sample request
-sample response
-INDEX
-sample request
-Request first 10 pages
-Request the next 10 pages after the first 10
-sample response
-Sample Page Request
-Sample Button Request
+---
+layout: default
+title: Page
+---
+
+# Page
+
+This document defines the Page resource.
+
+Page resources represent share pages that supporters can use to disseminate
+content via their social media networks.
+
+### Sections
+* [Endpoints and URL structures](#endpoints-and-url-structures)
+* [Fields](#fields)
+* [Scenarios](#scenarios)
+    * [Scenario: Retrieving a collection of pages (GET)](
+#scenario-retrieving-pages)
+    * [Scenario: Retrieving an individual page (GET)](
+#scenario-retrieving-page)
+    * [Scenario: Retrieving the analytics for a page (GET)](
+#scenario-retrieving-analytics-page)
+    * [Scenario: Creating a page, with defaults (POST)](
+#scenario-creating-page-basic)
+    * [Scenario: Creating a page, specifying A/B tests and options (POST)](
+#scenario-creating-page-advanced)
+    * [Scenario: Modifying a page to add a new A/B variant (PUT)](
+#scenario-modifying-page-add-variant)
+    * [Scenario: Modifying a page to remove an A/B variant (PUT)](
+#scenario-modifying-page-remove-variant)
+    * [Scenario: Deleting a page (DELETE)](
+#scenario-deleting-page)
+
+{% include endpoints_and_url_structures.md %}
+
+The link relation label for a Page resource
+is ```osdi:page``` for a single Page resource
+or ```osdi:pages``` for a collection of Page resources.
+
+_[Back to top...](#)_
+
+## Fields
+
+### Page Fields
+
+---
+layout: default
+title: Button
+---
+
+# Button
+
+This document defines the Button resource.
+
+Button resources represent share buttons that supporters can use to disseminate
+content via their social media networks.
+
+### Sections
+* [Endpoints and URL structures](#endpoints-and-url-structures)
+* [Fields](#fields)
+* [Scenarios](#scenarios)
+    * [Scenario: Retrieving a collection of buttons (GET)](
+#scenario-retrieving-buttons)
+    * [Scenario: Retrieving an individual button (GET)](
+#scenario-retrieving-button)
+    * [Scenario: Retrieving the analytics for a button (GET)](
+#scenario-retrieving-analytics-button)
+    * [Scenario: Creating a button with defaults (POST)](
+#scenario-creating-button-basic)
+    * [Scenario: Creating a button, specifying A/B tests and options (POST)](
+#scenario-creating-button-advanced)
+    * [Scenario: Modifying a page to add a new A/B variant (PUT)](
+#scenario-modifying-page-add-variant)
+    * [Scenario: Modifying a page to remove an A/B variant (PUT)](
+#scenario-modifying-page-remove-variant)
+    * [Scenario: Deleting a button (DELETE)](
+#scenario-deleting-button)
+
+{% include endpoints_and_url_structures.md %}
+
+The link relation label for a Button resource
+is ```osdi:button``` for a single Button resource
+or ```osdi:buttons``` for a collection of Button resources.
+
+_[Back to top...](#)_
+
+## Fields
+
+### Button Fields
 
 PAGES AND BUTTONS
 Object: page or button
