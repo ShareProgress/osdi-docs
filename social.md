@@ -1,75 +1,4 @@
-Overview
-
-The ShareProgress API will provide two interfaces -
-one for traditional CRUD (create, read, update, delete) management of pages
-and buttons via RESTful JSON application, and the other via JavaScript.
-
-RESTful API
-Organizations will be able to generate a unique API key that they will be able
-to append to POST requests for authentication. A successful operation will -
-in all cases - return a JSON object of the page that is being interacted with.
-
-URL Endpoint and Encoding
-
-Request content can be encoded as a form or as JSON
-
-URL
-https://run.shareprogress.org/api/version/object/method
-
-PARAMETERS AS JSON ENCODED
-{
-    "key": "YOUR_KEY",
-...
-}
-Parameters
-
-Object: The class of object you’re operating on
-Method: The method you’d like to invoke
-Version: The API version number -
-if not included, will default to the latest version of the API
-Key: Your API key - accessible from https://run.shareprogress.org/account
-
-
-Sample Response
-
-{
-    "success": true, // Boolean indicator
-    "response": [...] // Will return all results in an array
-    "message": [...] // If there’s an error will return an explanation here
-}
-
-Success: Indicates whether the operation was a success
-
-Response: Will return all responses as an array - if requests are for singular
-object, it will return response as the first element.
-
-Rate Limit
-
-The API is rate limited to 30 requests per minute. Requests are counted
-progressively and are removed from the count after a minute - meaning you can
-continuously make API requests if you stagger them every 2 seconds.
-
-When you exceed your rate limit the API will return a 429 Header and a message
-letting you know you’ve exceeded the rate limit.
-
-The following http header values are returned with the API request to help
-manage your application:
-
-X-RateLimit-Limit - The number of requests allowed per minute
-
-X-RateLimit-Remaining - The remaining number of requests available in the that
-time window
-
-X-RateLimit-Reset - The time when the count will begin to reset - keep in mind
-it resets progressively
-
-
 Overview
-RESTful API
-URL Endpoint and Encoding
-Parameters
-Sample Response
-Rate Limit
 PAGES AND BUTTONS
 Fields
 Methods
@@ -119,12 +48,7 @@ sample response
 ACCOUNT INFO
 READ
 sample request
-sample response
-JavaScript API
-Bind Share Event
-Binding the Event
-Security
-
+sample response
 
 
 PAGES AND BUTTONS
@@ -1268,64 +1192,3 @@ sample response
         }
     ]
 }
-
-JavaScript API
-
-The JavaScript API will provide functionality to associate events with user
-behavior on the Share Page or on pages with Share Buttons:
-
-Bind Share Event
-We will call share events on the window when a share clicked on share pages
-or on a share button - passing share type (e.g., email, Facebook), the
-clicked object, visit ID, and share language variant to the specified function.
-
-Event Data Additional data will be appended onto the event object - giving
-more information about various details about the event - including:
-
-share type The share type of the event: Facebook, Twitter, email, other
-
-share object The DOM object where the share took place
-
-visit_id The ID assigned to this visitor
-
-variant_id The ID of the variant assigned to this visitor
-
-Binding the Event
-// Plain Javascript for IE 8+
-window.addEventListener('share',function(event) {
-
-    var share_data = event.share,
-        share_type = share_data.share_type,
-        share_object = share_data.share_object,
-        visit_id = share_data.visit_id,
-        variant_id = share_data.variant_id
-
-    //... do something with all this stuff here
-})
-
-
-// jQuery
-jQuery(window).bind('share',function(event){
-
-    // With jQuery you'll need to reference the Original Event object
-    var share_data = event.originalEvent.share,
-        share_type = share_data.share_type,
-        share_object = share_data.share_object,
-        visit_id = share_data.visit_id
-        variant_id = share_data.variant_id,
-        variant = share_data.variant
-
-    //... do something with all this stuff here
-})
-
-
-
-
-
-Security
-
-The RESTful API should be very straightforward - orgs will be able to view
-and generate (or regenerate) an API key.
-
-For JavaScript, no back-end access with be exposed in the current version of
-the API, so there will not be any security risks involved.
