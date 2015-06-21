@@ -41,40 +41,25 @@ _[Back to top...](#)_
 
 ## Fields
 
-id (optional) The ID of the page to update. If omitted, will create a new page
+| Name          | Type      | Description
+|-----------    |-----------|--------------
+id (optional)   | integer   | The ID of the page to update. If omitted, will create a new page
 with the specified parameters.
-
-page_url (required) URL of the page that the Share Page or Share Button will be
+page_url (required) | string | URL of the page that the Share Page or Share Button will be
 sharing. The page of the URL will be scraped upon posting to read in meta data,
 which may optionally be used for variant content (see auto_fill for more
 information). If the page cannot be returned - due to a malformed URL or down
 server - it will return an error.
-
-wrapper_id (optional) The ID of the wrapper that should be assigned to the
+| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the
 page - if blank will default to the organization’s default wrapper.
-
-page_title (optional) The internal title of the Share Page or Share Button.
+| page_title (optional) | string | The internal title of the Share Page or Share Button.
 If not provided, will be scraped from the page_url.
-
-html_title (optional, pages only) The HTML title of the Share Page. If not
+| html_title (optional) | string | The HTML title of the Share Page. If not
 provided, will use page_title or be scraped from the page_url.
-
-auto_fill (optional, defaults to true) Specifies whether we should fill in any
+auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any
 missing variant information with what we scrape from the page_url. If listed as
 false, variants will remain blank if not specified.
-
-button_template (required, button only) Share Buttons require one of the
-following templates to be rendered:
-sp_em_small
-sp_em_large
-sp_tw_small
-sp_tw_large
-sp_fb_small
-sp_fb_large
-See the create button page for a preview of how each of these look
-
-
-variants (optional) An array of the share content variants, grouped by sharing
+variants (optional) | array of variants | An array of the share content variants, grouped by sharing
 channel, which are currently facebook, twitter, and email. If more than one
 variant is included, a share content A/B test will be run between all specified
 variants. Some things to keep in mind:
@@ -205,29 +190,23 @@ _[Back to top...](#)_
 
 ## Fields
 
-id (optional) The ID of the page to update. If omitted, will create a new page
+| Name          | Type      | Description
+|-----------    |-----------|--------------
+| id (optional) | integer | The ID of the page to update. If omitted, will create a new page
 with the specified parameters.
-
-page_url (required) URL of the page that the Share Page or Share Button will be
+| page_url (required) | string | URL of the page that the Share Page or Share Button will be
 sharing. The page of the URL will be scraped upon posting to read in meta data,
 which may optionally be used for variant content (see auto_fill for more
 information). If the page cannot be returned - due to a malformed URL or down
 server - it will return an error.
-
-wrapper_id (optional) The ID of the wrapper that should be assigned to the
+| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the
 page - if blank will default to the organization’s default wrapper.
-
-page_title (optional) The internal title of the Share Page or Share Button.
+| page_title (optional) | string | The internal title of the Share Page or Share Button.
 If not provided, will be scraped from the page_url.
-
-html_title (optional, pages only) The HTML title of the Share Page. If not
-provided, will use page_title or be scraped from the page_url.
-
-auto_fill (optional, defaults to true) Specifies whether we should fill in any
+| auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any
 missing variant information with what we scrape from the page_url. If listed as
 false, variants will remain blank if not specified.
-
-button_template (required, button only) Share Buttons require one of the
+| button_template (required) | string | Share Buttons require one of the
 following templates to be rendered:
 sp_em_small
 sp_em_large
@@ -236,9 +215,7 @@ sp_tw_large
 sp_fb_small
 sp_fb_large
 See the create button page for a preview of how each of these look
-
-
-variants (optional) An array of the share content variants, grouped by sharing
+| variants (optional) | array of variants | An array of the share content variants, grouped by sharing
 channel, which are currently facebook, twitter, and email. If more than one
 variant is included, a share content A/B test will be run between all specified
 variants. Some things to keep in mind:
