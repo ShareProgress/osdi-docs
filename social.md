@@ -1,4 +1,3 @@
-Overview
 PAGES AND BUTTONS
 Fields
 Methods
@@ -32,24 +31,6 @@ Request the next 10 pages after the first 10
 sample response
 Sample Page Request
 Sample Button Request
-WRAPPERS
-CREATE & UPDATE
-sample request
-sample response
-READ
-sample request
-sample response
-DESTROY
-sample request
-sample response
-INDEX
-sample request
-sample response
-ACCOUNT INFO
-READ
-sample request
-sample response
-
 
 PAGES AND BUTTONS
 Object: page or button
@@ -1094,6 +1075,19 @@ Sample Button Request
     ]
 }
 ```
+WRAPPERS
+CREATE & UPDATE
+sample request
+sample response
+READ
+sample request
+sample response
+DESTROY
+sample request
+sample response
+INDEX
+sample request
+sample response
 
 WRAPPERS
 CREATE & UPDATE
@@ -1236,6 +1230,11 @@ sample response
     ]
 }
 ```
+
+ACCOUNT INFO
+READ
+sample request
+sample response
 
 ACCOUNT INFO
 READ
