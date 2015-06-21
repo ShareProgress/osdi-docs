@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Page
+title: Social Sharing Resources
 ---
 
 # Page
@@ -42,11 +42,6 @@ _[Back to top...](#)_
 ## Fields
 
 ### Page Fields
-
----
-layout: default
-title: Button
----
 
 # Button
 
