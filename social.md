@@ -212,16 +212,19 @@ Sample Request:
 
 Simple Create New Page- autofilling variants from the page data
 
+```javascript
 {
     "key": "YOUR_API_KEY",
     "page_url": "http://your-page-url.com",
     "page_title": "The Page Title",
     "auto_fill" : true,
 }
+```
 
 Create New Page - autofilling variants from the page data for unset variant
 options
 
+```javascript
 {
     "key": "YOUR_API_KEY",
     "page_url": "http://your-page-url.com",
@@ -238,8 +241,11 @@ options
         ]
     }
 }
+```
 
 Edit Existing Page - Adding New Facebook Variant
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
@@ -272,8 +278,11 @@ Edit Existing Page - Adding New Facebook Variant
         ]
     }
 }
+```
 
 Create New Page - With A/B Tests & Advanced Options
+
+```javascript
 {
     "key": "YOUR_API_KEY",
     "page_url": "http://your-page-url.com",
@@ -319,8 +328,11 @@ Create New Page - With A/B Tests & Advanced Options
         }
     }
 }
+```
 
 Create New Button - With A/B Tests & Advanced Options
+
+```javascript
 {
     "key": "YOUR_API_KEY",
     "page_url": "http://your-page-url.com",
@@ -351,8 +363,11 @@ Create New Button - With A/B Tests & Advanced Options
         }
     }
 }
+```
 
 Edit Page - Deleting A/B Variants from Email
+
+```javascript
 {
     "key": "YOUR_API_KEY",
     "page_url": "http://your-page-url.com",
@@ -394,7 +409,7 @@ Edit Page - Deleting A/B Variants from Email
         ]
     }
 }
-
+```
 
 
 Sample Response
@@ -416,6 +431,8 @@ variants the variants and their ids, important as if you want to update these
 later you’ll need to include the id
 
 Saving a Page
+
+```javascript
 {
     "success":true,
     "response": [
@@ -464,8 +481,11 @@ Saving a Page
         }
     ]
 }
+```
 
 Saving a Button - using the Large Facebook (sp_fb_large) template
+
+```javascript
 {
     "success":true,
     "response": [
@@ -504,6 +524,7 @@ Saving a Button - using the Large Facebook (sp_fb_large) template
         }
     ]
 }
+```
 
 
 
@@ -518,9 +539,12 @@ request type POST, GET
 
 sample request
 
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
+```
 
 }
 
@@ -538,6 +562,8 @@ Share Button. If you have not set custom advanced options for the page or
 button, READ will return the default values for the organization.
 
 Page with no A/B tests & default advanced options
+
+```javascript
 {
     "success": true
     "response" : [
@@ -578,8 +604,11 @@ Page with no A/B tests & default advanced options
         }
     ]
 }
+```
 
 Page with A/B tests & advanced options
+
+```javascript
 {
     "success": true
     "response" : [
@@ -647,8 +676,11 @@ Page with A/B tests & advanced options
         }
     ]
 }
+```
 
 Button with A/B tests & advanced options
+
+```javascript
 {
     "success": true
     "response" : [
@@ -692,6 +724,7 @@ Button with A/B tests & advanced options
         }
     ]
 }
+```
 
 
 ANALYZE
@@ -703,10 +736,13 @@ request type POST, GET
 
 sample request
 
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
 
@@ -731,6 +767,8 @@ viral actions for the Share Page or Share Button. Viral actions are only
 included for Share Pages.
 
 Page with A/B tests
+
+```javascript
 {
     "success" : true,
     "response" : [
@@ -938,6 +976,7 @@ Button with A/B tests
         }
     ]
 }
+```
 
 DESTROY
 This call deletes the specified Share Page or Share Buttons.
@@ -947,13 +986,18 @@ request type POST
 
 sample request
 
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
 
+
+```javascript
 {
     "success":true,
     "response": [
@@ -962,6 +1006,7 @@ sample response
         }
     ]
 }
+```
 
 INDEX
 Lists all Share Pages and Share Buttons - each organized into a separate array.
@@ -978,6 +1023,8 @@ Be default, will return the first 50 pages. Can specify both a limit and
 offset in the request.
 
 Request first 10 pages
+
+```javascript
 {
     "key": "YOUR_API_KEY",
     "limit": "10",
@@ -988,6 +1035,7 @@ Request the next 10 pages after the first 10
     "offset": "10",
     "limit": "10",
 }
+```
 
 sample response
 
@@ -996,6 +1044,8 @@ Will return the id, page_url, page_title, share_page_url / share_button_html,
 and whether the Share Page or Share Buttons are actively running an experiment.
 
 Sample Page Request
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1013,11 +1063,14 @@ Sample Page Request
             "share_page_url":"http://shpg.org/1/11",
             "is_active": false,
         }
+```
 
     ]
 }
 
 Sample Button Request
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1041,6 +1094,8 @@ Sample Button Request
 
     ]
 }
+```
+
 WRAPPERS
 CREATE & UPDATE
 
@@ -1054,6 +1109,8 @@ Default (optional) If defined as true - will override the current default
 wrapper.
 
 sample request
+
+```javascript
 {
 "id": 48,
     "name": "Default Wrapper",
@@ -1062,8 +1119,11 @@ sample request
         }
     ]
 }
+```
 
 sample response
+
+```javascript
 {
     "success": true
     "response": [
@@ -1073,6 +1133,7 @@ sample response
         }
     ]
 }
+```
 
 READ
 
@@ -1080,12 +1141,17 @@ endpoint  /v1/wrappers/read
 request type POST, GET
 
 sample request
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1097,6 +1163,7 @@ sample response
         }
     ]
 }
+```
 
 
 DESTROY
@@ -1105,12 +1172,17 @@ endpoint  /v1/wrappers/delete
 request type POST, GET
 
 sample request
+
+```javascript
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1119,6 +1191,7 @@ sample response
         }
     ]
 }
+```
 
 INDEX
 
@@ -1128,11 +1201,16 @@ request type POST, GET
 
 sample request
 
+
+```javascript
 {
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1145,22 +1223,20 @@ sample response
             "id": 40,
             "name": "Christmas Present Wrapper",
             "default": false
-
         },
         {
             "id": 13,
             "name": "Freestyle Wrapper",
             "default": false
-
         },
         {
             "id": 20,
             "name": "Other Wrapper",
             "default": true
-
         }
     ]
 }
+```
 
 ACCOUNT INFO
 READ
@@ -1173,11 +1249,16 @@ request type POST, GET
 
 sample request
 
+
+```javascript
 {
     "key": "YOUR_API_KEY",
 }
+```
 
 sample response
+
+```javascript
 {
     "success":true,
     "response": [
@@ -1192,3 +1273,4 @@ sample response
         }
     ]
 }
+```
