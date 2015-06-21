@@ -43,26 +43,12 @@ _[Back to top...](#)_
 
 | Name          | Type      | Description
 |-----------    |-----------|--------------
-id (optional)   | integer   | The ID of the page to update. If omitted, will create a new page
-with the specified parameters.
-page_url (required) | string | URL of the page that the Share Page or Share Button will be
-sharing. The page of the URL will be scraped upon posting to read in meta data,
-which may optionally be used for variant content (see auto_fill for more
-information). If the page cannot be returned - due to a malformed URL or down
-server - it will return an error.
-| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the
-page - if blank will default to the organization’s default wrapper.
-| page_title (optional) | string | The internal title of the Share Page or Share Button.
-If not provided, will be scraped from the page_url.
-| html_title (optional) | string | The HTML title of the Share Page. If not
-provided, will use page_title or be scraped from the page_url.
-auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any
-missing variant information with what we scrape from the page_url. If listed as
-false, variants will remain blank if not specified.
-variants (optional) | array of variants | An array of the share content variants, grouped by sharing
-channel, which are currently facebook, twitter, and email. If more than one
-variant is included, a share content A/B test will be run between all specified
-variants. Some things to keep in mind:
+| id (optional)   | integer   | The ID of the page to update. If omitted, will create a new page with the specified parameters.
+| page_url (required) | string | URL of the page that the Share Page or Share Button will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
+| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
+| page_title (optional) | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
+| html_title (optional) | string | The HTML title of the Share Page. If not provided, will use page_title or be scraped from the page_url.  auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
+| variants (optional) | array of variants | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included, a share content A/B test will be run between all specified variants. Some things to keep in mind:
 
 Variants can optionally include an id parameter, which will cause the
 existing variant share content to be updated. Any variants lacking an id
@@ -76,46 +62,15 @@ included in the string, which will be enforced on creation and update.
 Additionally, the facebook_thumbnail parameter is advised to be greater than
 200px x 200px, but this is not enforced.
 
-facebook
-facebook_title (limit 100 characters) The title of the post when the link is
-shared on Facebook
-
-facebook_description (limit 260 characters) The description of the post when
-the link is shared on Facebook
-
-facebook_thumbnail (advised to be larger than 200px x 200px - not enforced)
-URL for the thumbnail image of the post when the link is shared on Facebook
-
-twitter
-twitter_message (limit 140 characters, must include {LINK}) The text of the
-post when the link is shared on Twitter. The {LINK} tag is counted as 22
-characters, the standard length for a URL on Twitter.
-
-email
-email_subject (limit 100 characters) The subject line of the message when the
-link is shared by email
-
-email_body (limit 750 characters, must include {LINK} tag) The body of the
-message when the link is shared by email. The {LINK} tag is counted as seven
-characters here.
-
-advanced_options (optional) These are additional customizations for a Share
-Page or Share Buttons. If omitted, they will default to an organization’s
-default account settings.
-
-prompt (page only, limit 120 characters) A small block of text that appears
-on share pages, prompting the user to share. Character limit will be enforced
-on creation and update.
-
-automatic_traffic_routing (defaults to true) A flag to let ShareProgress know
-whether to route share content A/B test traffic automatically via a multi-arm
-bandit algorithm, or whether traffic is even split across all variants until
-a winner is selected.
-
-buttons_optimize_actions (button only, defaults to false) A flag to let
-ShareProgress know whether to optimize for viral actions as opposed to viral
-clicks when running A/B tests with share buttons. Viral actions are tracked
-via a conversion tag of the form: <div class='sp_ID sp_conversion'></div>
+| facebook_title (limit 100 characters) | string | The title of the post when the link is shared on Facebook
+| facebook_description (limit 260 characters) | string | The description of the post when the link is shared on Facebook
+| facebook_thumbnail (advised to be larger than 200px x 200px - not enforced) | string | URL for the thumbnail image of the post when the link is shared on Facebook
+| twitter_message (limit 140 characters, must include {LINK}) | string | The text of the post when the link is shared on Twitter. The {LINK} tag is counted as 22 characters, the standard length for a URL on Twitter.
+| email_subject (limit 100 characters) | string | The subject line of the message when the link is shared by email
+| email_body (limit 750 characters, must include {LINK} tag) | string | The body of the message when the link is shared by email. The {LINK} tag is counted as seven characters here.
+| advanced_options (optional) | string | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| prompt (limit 120 characters) | string | A small block of text that appears on share pages, prompting the user to share. Character limit will be enforced on creation and update.
+| automatic_traffic_routing (defaults to true) | boolean | A flag to let ShareProgress know whether to route share content A/B test traffic automatically via a multi-arm bandit algorithm, or whether traffic is even split across all variants until a winner is selected.
 
 custom_params Specifies an additional, channel-specific URL parameter to be
 included with the page link when shared, to allow outside systems to track
@@ -192,33 +147,13 @@ _[Back to top...](#)_
 
 | Name          | Type      | Description
 |-----------    |-----------|--------------
-| id (optional) | integer | The ID of the page to update. If omitted, will create a new page
-with the specified parameters.
-| page_url (required) | string | URL of the page that the Share Page or Share Button will be
-sharing. The page of the URL will be scraped upon posting to read in meta data,
-which may optionally be used for variant content (see auto_fill for more
-information). If the page cannot be returned - due to a malformed URL or down
-server - it will return an error.
-| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the
-page - if blank will default to the organization’s default wrapper.
-| page_title (optional) | string | The internal title of the Share Page or Share Button.
-If not provided, will be scraped from the page_url.
-| auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any
-missing variant information with what we scrape from the page_url. If listed as
-false, variants will remain blank if not specified.
-| button_template (required) | string | Share Buttons require one of the
-following templates to be rendered:
-sp_em_small
-sp_em_large
-sp_tw_small
-sp_tw_large
-sp_fb_small
-sp_fb_large
-See the create button page for a preview of how each of these look
-| variants (optional) | array of variants | An array of the share content variants, grouped by sharing
-channel, which are currently facebook, twitter, and email. If more than one
-variant is included, a share content A/B test will be run between all specified
-variants. Some things to keep in mind:
+| id (optional) | integer | The ID of the page to update. If omitted, will create a new page with the specified parameters.
+| page_url (required) | string | URL of the page that the Share Page or Share Button will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
+| wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
+| page_title (optional) | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
+| auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
+| button_template (required) | string | Share Buttons require one of the following templates to be rendered: sp_em_small sp_em_large sp_tw_small sp_tw_large sp_fb_small sp_fb_large See the create button page for a preview of how each of these look
+| variants (optional) | array of variants | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included, a share content A/B test will be run between all specified variants. Some things to keep in mind:
 
 Variants can optionally include an id parameter, which will cause the
 existing variant share content to be updated. Any variants lacking an id
