@@ -544,9 +544,8 @@ sample request
 {
     "id" : 10,
     "key": "YOUR_API_KEY",
-```
-
 }
+```
 
 sample response
 
