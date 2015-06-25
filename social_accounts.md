@@ -1,9 +1,9 @@
 ---
 layout: default
-title: AccountInfo
+title: Account
 ---
 
-# AccountInfo
+# Account
 
 This document defines the AccountInfo resource.
 
@@ -11,6 +11,7 @@ This document defines the AccountInfo resource.
 
 * [Endpoints and URL structures](#endpoints-and-url-structures)
 * [Fields](#fields)
+* [Scenarios](#scenarios)
 
 {% include endpoints_and_url_structures.md %}
 

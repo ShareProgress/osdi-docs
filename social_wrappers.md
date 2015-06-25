@@ -11,6 +11,7 @@ This document defines the Wrapper resource.
 
 * [Endpoints and URL structures](#endpoints-and-url-structures)
 * [Fields](#fields)
+* [Scenarios](#scenarios)
 
 {% include endpoints_and_url_structures.md %}
 

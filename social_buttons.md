@@ -52,9 +52,9 @@ _[Back to top...](#)_
 | page_title (optional) | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
 | auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
 | button_template (required) | string | Share Buttons require one of the following templates to be rendered: sp_em_small, sp_em_large, sp_tw_small, sp_tw_large, sp_fb_small, sp_fb_large. See the create button page for a preview of how each of these look.
-| variants (optional) | [VariantSet](social_variant_set.html) | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included in a channel, a share content A/B test will be run between all specified variants. 
-| advanced_options (optional) | [SharingOptionsSet](social_sharing_options_set.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| variants (optional) | [VariantSet](social_variant_sets.html) | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included in a channel, a share content A/B test will be run between all specified variants. 
+| advanced_options (optional) | [SharingOptionsSet](social_sharing_options_sets.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
 
 ### Related Objects
-* [VariantSet](social_variant_set.html)
-* [SharingOptionsSet](social_sharing_options_set.html)
+* [VariantSet](social_variant_sets.html)
+* [SharingOptionsSet](social_sharing_options_sets.html)

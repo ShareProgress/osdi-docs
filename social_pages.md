@@ -51,10 +51,10 @@ _[Back to top...](#)_
 | page_title (optional) | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
 | html_title (optional) | string | The HTML title of the Share Page. If not provided, will use page_title or be scraped from the page_url.
 | auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
-| variants (optional) | [VariantSet](social_variant_set.html) | An array of the share content variants
-| advanced_options (optional) | [SharingOptionsSet](social_sharing_options_set.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| variants (optional) | [VariantSet](social_variant_sets.html) | An array of the share content variants
+| advanced_options (optional) | [SharingOptionsSet](social_sharing_options_sets.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
 
 ### Related Objects
 
-* [VariantSet](social_variant_set.html)
-* [SharingOptionsSet](social_sharing_options_set.html)
+* [VariantSet](social_variant_sets.html)
+* [SharingOptionsSet](social_sharing_options_sets.html)
