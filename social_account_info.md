@@ -19,3 +19,18 @@ This document defines the AccountInfo resource.
 |Name|Type |Description|
 |---|---|---|
 |key|string|Your API key|
+|response|[ResponseSet](#responseset)|Array of account info|
+
+### Related Objects
+
+#### ResponseSet
+
+|Name|Type |Description|
+|---|---|---|
+|account_name|string|Name of organization|
+|billing_start|date||
+|billing_end|date||
+|shares_this_cycle|integer||
+|share_budget|integer||
+|plan|string||
+|monthly_cost|string||

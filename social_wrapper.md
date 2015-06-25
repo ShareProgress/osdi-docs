@@ -20,6 +20,7 @@ This document defines the Wrapper resource.
 |---|---|---|
 |key|string|Your API key|
 |default| boolean|If defined as true - will override the current default wrapper. |
-|name|string||
-|html|string||
+|name|string| Name of the wrapper |
+|html|string| Content of the wrapper |
+|success|boolean| true if wrapper is created |
 
