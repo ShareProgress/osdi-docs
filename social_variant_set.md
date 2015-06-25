@@ -18,6 +18,8 @@ included in the string, which will be enforced on creation and update.
 * Additionally, the facebook_thumbnail parameter is advised to be greater than
 200px x 200px, but this is not enforced.
 
+| Name | Type | Description
+|------|------|-----------
 | facebook_title (limit 100 characters) | string | The title of the post when the link is shared on Facebook
 | facebook_description (limit 260 characters) | string | The description of the post when the link is shared on Facebook
 | facebook_thumbnail (advised to be larger than 200px x 200px - not enforced) | string | URL for the thumbnail image of the post when the link is shared on Facebook

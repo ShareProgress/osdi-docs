@@ -13,6 +13,7 @@ content via their social media networks.
 ### Sections
 * [Endpoints and URL structures](#endpoints-and-url-structures)
 * [Fields](#fields)
+    * [Related Objects](#related-objects)
 * [Scenarios](#scenarios)
     * [Scenario: Retrieving a collection of buttons (GET)](
 #scenario-retrieving-buttons)
@@ -51,25 +52,8 @@ _[Back to top...](#)_
 | auto_fill (optional, defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
 | button_template (required) | string | Share Buttons require one of the following templates to be rendered: sp_em_small, sp_em_large, sp_tw_small, sp_tw_large, sp_fb_small, sp_fb_large. See the create button page for a preview of how each of these look.
 | variants (optional) | [VariantSet](social_variant_set.html) | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included in a channel, a share content A/B test will be run between all specified variants. 
-|advanced_options (optional) | [AdvancedOptions](social_advanced_options.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| advanced_options (optional) | [SharingOptionsSet](social_sharing_options_set.html) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
 
-## Related Resources
-
+### Related Objects
 * [VariantSet](social_variant_set.html)
-* [AdvancedOptions](social_advanced_options.html)
-
-
-## Methods
-
-* CREATE
-* UPDATE
-
-## Notes
-API users will be able to create or updatd Share Buttons by
-specifying the URL of the page to be shared and, optionally, the Share Page /
-Share Button title. The request will auto-generate the share content variants
-from a scrape of the provided URL. API users can optionally pass an array of
-share content variants to override the content generated from URL scraping and,
-if multiple variants are included, set up share content A/B tests.
-
-
+* [SharingOptionsSet](social_sharing_options_set.html)
