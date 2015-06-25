@@ -45,6 +45,7 @@ _[Back to top...](#)_
 
 | Name          | Type      | Description
 |-----------    |-----------|--------------
+|key|string|Your API key|
 | id (optional) | integer | The ID of the page to update. If omitted, will create a new page with the specified parameters.
 | page_url (required) | string | URL of the page that the Share Page or Share Button will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
 | wrapper_id (optional) | integer | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
