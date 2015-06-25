@@ -5,7 +5,7 @@ title: Account
 
 # Account
 
-This document defines the AccountInfo resource.
+This document defines the Account resource.
 
 ### Sections
 
