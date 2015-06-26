@@ -65,7 +65,7 @@ _[Back to top...](#)_
 {% include links_intro.md %}
 
 |Name|Type|Description|
-| wrapper_id | integer | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
+| wrapper | [PageWrapper](page_wrapper.html) | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
 
 ## Related Resources
 
