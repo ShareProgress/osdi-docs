@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Wrapper
+title: PageWrapper
 ---
  
-# Wrapper
+# PageWrapper
 
-This document defines the Wrapper resource.
+This document defines the PageWrapper resource.
 
 ### Sections
-
+	
 * [Endpoints and URL structures](#endpoints-and-url-structures)
 * [Fields](#fields)
 * [Scenarios](#scenarios)
@@ -19,7 +19,6 @@ This document defines the Wrapper resource.
 
 |Name|Type |Description|
 |---|---|---|
-|key|string|Your API key|
 |default| boolean|If defined as true - will override the current default wrapper. |
 |name|string| Name of the wrapper |
 |html|string| Content of the wrapper |
