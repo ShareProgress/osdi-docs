@@ -1,5 +1,6 @@
 
 #### VariantSet
+
 A collection of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included, a share content A/B test will be run between all specified variants. 
 
 ##### Fields

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Account
+title: AccountResponse
 ---
 
-# Account
+# AccountResponse
 
-This document defines the Account resource.
+This document defines the AccountResponse resource.
 
 ### Sections
 
@@ -20,8 +20,11 @@ This document defines the Account resource.
 
 |Name|Type|Description|
 |---|---|---|
-|response|[ResponseSet](#responseset)|Array of account info|
+|account_name|string|Name of organization|
+|billing_start|date||
+|billing_end|date||
+|shares_this_cycle|integer||
+|share_budget|integer||
+|plan|string||
+|monthly_cost|string||
 
-### Related Objects
-
-{% include response_sets.md %}
