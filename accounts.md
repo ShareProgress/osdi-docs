@@ -1,9 +1,9 @@
 ---
 layout: default
-title: AccountResponse
+title: Account
 ---
 
-# AccountResponse
+# Account
 
 This document defines the AccountResponse resource.
 
@@ -20,7 +20,7 @@ This document defines the AccountResponse resource.
 
 |Name|Type|Description|
 |---|---|---|
-|account_name|string|Name of organization|
+|name|string|Name of organization|
 |billing_start|date||
 |billing_end|date||
 |shares_this_cycle|integer||

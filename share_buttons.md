@@ -35,8 +35,8 @@ content via their social media networks.
 {% include endpoints_and_url_structures.md %}
 
 The link relation label for a Button resource
-is ```osdi:button``` for a single Button resource
-or ```osdi:buttons``` for a collection of Button resources.
+is ```osdi:share_button``` for a single Button resource
+or ```osdi:share_buttons``` for a collection of Button resources.
 
 _[Back to top...](#)_
 
@@ -46,12 +46,12 @@ _[Back to top...](#)_
 | Name          | Type      | Description
 |-----------    |-----------|--------------
 | id  | integer | The ID of the page to update. If omitted, will create a new page with the specified parameters.
-| page_url  | string | URL of the page that the Share Page or Share Button will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
-| page_title  | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
+| page_url  | string | URL of the page that the SharePage or ShareButton will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
+| page_title  | string | The internal title of the SharePage or ShareButton.  If not provided, will be scraped from the page_url.
 | auto_fill | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
-| button_template  | string | Share Buttons require one of the following templates to be rendered: sp_em_small, sp_em_large, sp_tw_small, sp_tw_large, sp_fb_small, sp_fb_large. See the create button page for a preview of how each of these look.
+| button_template  | string | ShareButtons require one of the following templates to be rendered: sp_em_small, sp_em_large, sp_tw_small, sp_tw_large, sp_fb_small, sp_fb_large. See the create button page for a preview of how each of these look.
 | variants  | [VariantSet](#variantset) | An array of the share content variants, grouped by sharing channel, which are currently facebook, twitter, and email. If more than one variant is included in a channel, a share content A/B test will be run between all specified variants. 
-| advanced_options  | [ShareOptionSet](#shareoptionset) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| advanced_options  | [ShareOptionSet](#shareoptionset) | These are additional customizations for a SharePage or ShareButtons. If omitted, they will default to an organization’s default account settings.
 
 ### Related Objects
 {% include variant_sets.md %}

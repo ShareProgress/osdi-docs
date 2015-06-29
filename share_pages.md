@@ -37,8 +37,8 @@ content via their social media networks.
 {% include endpoints_and_url_structures.md %}
 
 The link relation label for a Page resource
-is ```osdi:page``` for a single Page resource
-or ```osdi:pages``` for a collection of Page resources.
+is ```osdi:share_page``` for a single Page resource
+or ```osdi:share_pages``` for a collection of Page resources.
 
 _[Back to top...](#)_
 
@@ -47,12 +47,12 @@ _[Back to top...](#)_
 | Name          | Type      | Description
 |-----------    |-----------|--------------
 | id | integer   | The ID of the page to update. If omitted, will create a new page with the specified parameters.
-| page_url | string | URL of the page that the Share Page or Share Button will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
-| page_title | string | The internal title of the Share Page or Share Button.  If not provided, will be scraped from the page_url.
-| html_title | string | The HTML title of the Share Page. If not provided, will use page_title or be scraped from the page_url.
+| page_url | string | URL of the page that the SharePage or ShareButton will be sharing. The page of the URL will be scraped upon posting to read in meta data, which may optionally be used for variant content (see auto_fill for more information). If the page cannot be returned - due to a malformed URL or down server - it will return an error.
+| page_title | string | The internal title of the SharePage or ShareButton.  If not provided, will be scraped from the page_url.
+| html_title | string | The HTML title of the SharePage. If not provided, will use page_title or be scraped from the page_url.
 | auto_fill (defaults to true) | boolean | Specifies whether we should fill in any missing variant information with what we scrape from the page_url. If listed as false, variants will remain blank if not specified.
 | variants | [VariantSet](#variantset) | An array of the share content variants
-| advanced_options | [ShareOptionSet](#shareoptionset) | These are additional customizations for a Share Page or Share Buttons. If omitted, they will default to an organization’s default account settings.
+| advanced_options | [ShareOptionSet](#shareoptionset) | These are additional customizations for a SharePage or ShareButtons. If omitted, they will default to an organization’s default account settings.
 
 ### Related Objects
 
@@ -65,7 +65,7 @@ _[Back to top...](#)_
 {% include links_intro.md %}
 
 |Name|Type|Description|
-| wrapper | [PageWrapper](page_wrapper.html) | The ID of the wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
+| wrapper | [PageWrapper](page_wrappers.html) | The wrapper that should be assigned to the page - if blank will default to the organization’s default wrapper.
 
 ## Related Resources
 
