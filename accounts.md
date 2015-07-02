@@ -5,7 +5,7 @@ title: Account
 
 # Account
 
-This document defines the AccountResponse resource.
+This document defines the Account resource.
 
 ### Sections
 
@@ -13,6 +13,7 @@ This document defines the AccountResponse resource.
 * [Fields](#fields)
     * [Related Objects](#related-objects)
 * [Scenarios](#scenarios)
+    * [Scenario: Retrieving an Account resource (GET)](#scenario-retrieving-an-account-resource-get)
 
 {% include endpoints_and_url_structures.md %}
 
@@ -28,3 +29,8 @@ This document defines the AccountResponse resource.
 |plan|string||
 |monthly_cost|string||
 
+## Scenarios
+
+{% include scenarios_intro.md %}
+
+### Scenario: Retrieving an Account resource (GET)

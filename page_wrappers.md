@@ -36,9 +36,9 @@ This document defines the PageWrapper resource.
 
 ### Scenario: Retrieving a list of PageWrappers (GET)
 
-### Scenario: Retrieving a Wrapper for a SharePage (GET)
+### Scenario: Retrieving a PageWrapper for a SharePage (GET)
 
-### Scenario: Creating a new Wrapper Resources (POST)
+### Scenario: Creating a new PageWrapper (POST)
 
 ### Scenario: Modifying a PageWrapper (PUT)
 
