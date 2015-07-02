@@ -13,7 +13,7 @@ A collection of the share content variants, grouped by sharing channel, which ar
 
 ##### Related Objects
 
-##### FacebookVariant[]
+##### FacebookVariant
 
 Content for Facebook shares
 
@@ -27,7 +27,7 @@ Content for Facebook shares
 |facebook_description|string|The description of the post when the link is shared on Facebook|
 |facebook_thumbnail|string|URL for the thumbnail image of the post when the link is shared on Facebook|
 
-##### TwitterVariant[]
+##### TwitterVariant
 
 Content for Twitter shares
 
@@ -39,7 +39,7 @@ Content for Twitter shares
 |\_destroy|boolean|If true, will delete the variant|
 |twitter_message |string |The text of the post when the link is shared on Twitter. Must include the text "{LINK}"|
 
-##### EmailVariant[]
+##### EmailVariant
 
 Content for email shares
 
