@@ -40,6 +40,36 @@ This document defines the PageWrapper resource.
 
 ### Scenario: Creating a new PageWrapper (POST)
 
+Creates or updates a wrapper - validates presence of the {SHAREACTION} in the HTML block.
+If 'default' is defined as true, this will override the current default wrapper.
+
+#### Request
+
+```javascript
+{
+     "id": 48,
+     "name": "Default Wrapper",
+     "default": false,
+     "html": "<!doctype html>\r\n<html lang=\"en\">\r\n<head>\r\n\r\n  <meta charset=\"utf-8\">\r\n\r\n  <title>PAGE_TITLE</title> <!-- this will be replaced automatically -->\r\n\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge;chrome=1\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\r\n  \r\n  <link href=\"/basic.css\" media=\"all\" rel=\"stylesheet\" type=\"text/css\" />\r\n</head>\r\n\r\n<body>\r\n  <iframe src=\"http://localhost:3000\"></iframe>\r\n\r\n  <div id=\"header\">\r\n    <div id=\"header_content\">\r\n      <h1>new org</h1>\r\n    </div> <!-- #header_content -->\r\n  </div> <!-- #header -->\r\n\r\n  <div class=\"content\">\r\n  {ShareAction}\r\n  </div> <!-- .content -->\r\n\r\n  <div id=\"footer\">\r\n    <div id=\"footer_content\">\r\n      Page Disclaimer\r\n    </div> <!-- #footer_content -->\r\n  </div> <!-- #footer -->\r\n\r\n</body>\r\n</html>\r\n",
+    }
+  ]
+}
+```
+
+#### Response
+
+```javascript
+{
+  "success": true
+  "response": [
+    {
+      "id": 48,
+      "name": "Default Wrapper"
+    }
+  ]
+}
+```
+
 ### Scenario: Modifying a PageWrapper (PUT)
 
 ### Scenario: Deleting a PageWrapper (DELETE)
